@@ -8,8 +8,10 @@
   </head>
 
   <body>
-    <%= link_to "Domov", root_path, class:"btn btn-primary" %>
-    <%= link_to "Novice", root_path, class:"btn btn-primary" %>
-    <%= yield %>
+    <div class="container">
+      <%= link_to "Domov", root_path, class:"btn btn-primary" %>
+      <%= link_to "Novice", articles_path, class:"btn btn-primary" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
