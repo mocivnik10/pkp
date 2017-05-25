@@ -18,15 +18,18 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.create(article_params)
 
-    @article.save
-    redirect_to admin_index_path
+    if @article.save
+      redirect_to admin_index_path, flash: {notice: 'Clanek je bil ustvarjen!'}
+    else
+      render 'new'
+    end
   end
 
   def update
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to admin_index_path
+      redirect_to admin_index_path, flash: {notice: 'Clanek posodobljen!'}
     else
       render 'edit'
     end
@@ -34,9 +37,12 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
 
-    redirect_to admin_index_path
+    if @article.destroy
+      redirect_to admin_index_path, flash: {notice: 'Clanek uspesno izbrisan!'}
+    else
+      redirect_to admin_index_path, flash: {notice: 'Clanka ni bilo mogoce izbrisati!!'}
+    end
   end
 
   private
