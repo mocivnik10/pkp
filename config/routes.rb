@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :admin, only: [:index] 
+
+  devise_for :admins
   root 'landing#index'
 
   resources :articles

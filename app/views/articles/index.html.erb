@@ -1,5 +1,4 @@
 <h1>Novice!</h1>
-<%= link_to 'Dodaj Novico', new_article_path %>
 
 <div class="">
   <% if @articles.any? %>
@@ -8,9 +7,7 @@
         <h2><%= article.title %></h2>
         <p><%= article.description %></p>
         <p><%= image_tag article.image.url(:medium) %></p>
-        <%= link_to 'Prikazi', article_path(article) %> |
-        <%= link_to 'Uredi', edit_article_path(article) %> |
-        <%= link_to 'Zbrisi', article_path(article), method: :delete, data: { confirm: 'Ali ste prepricani?'} %>
+        <%= link_to 'Prikazi', article_path(article) %>
       </div>
       <br>
     <% end %>

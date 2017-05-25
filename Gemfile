@@ -57,3 +57,5 @@ gem 'bootstrap-sass', '~> 3.3.7'
 # Paperclip for uploading images + aws
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3.0'
+# Authentication
+gem 'devise'
