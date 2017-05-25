@@ -19,14 +19,14 @@ class ArticlesController < ApplicationController
     @article = Article.create(article_params)
 
     @article.save
-    redirect_to @article
+    redirect_to admin_index_path
   end
 
   def update
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to admin_index_path
     else
       render 'edit'
     end
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to articles_path
+    redirect_to admin_index_path
   end
 
   private

@@ -1,0 +1,36 @@
+<h1>Admin<span class="badge badge-default"><%= current_admin.email %></span><span class="badge badge-danger"><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></span></h1>
+
+<%= link_to 'Dodaj Novico', new_article_path %>
+
+<div class="">
+  <% if @articles.any? %>
+    <% @articles.each do |article| %>
+      <div class="article">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Naslov</td>
+              <td>Opis</td>
+              <td>Actions</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= article.id %></td>
+              <td><%= article.title %></td>
+              <td><%= article.description %></td>
+              <td>
+                <%= link_to 'Prikazi', article_path(article) %> |
+                <%= link_to 'Uredi', edit_article_path(article) %> |
+                <%= link_to 'Zbrisi', article_path(article), method: :delete, data: { confirm: 'Ali ste prepricani?'} %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Trenutno se ni novic!</p>
+  <% end %>
+</div>
