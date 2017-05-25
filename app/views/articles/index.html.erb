@@ -6,7 +6,11 @@
       <div class="article">
         <h2><%= article.title %></h2>
         <p><%= article.description %></p>
-        <p><%= image_tag article.image.url(:medium) %></p>
+        <% if article.image? %>
+          <p><%= image_tag article.image.url(:medium) %></p>
+        <% else %>
+          
+        <% end %>
         <%= link_to 'Prikazi', article_path(article) %>
       </div>
       <br>

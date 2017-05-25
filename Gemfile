@@ -59,3 +59,5 @@ gem 'paperclip'
 gem 'aws-sdk', '~> 2.3.0'
 # Authentication
 gem 'devise'
+# Pagination
+gem 'kaminari'
