@@ -1,4 +1,4 @@
-<h1>Novice!</h1>
+<h1>Članki</h1>
 
 <div class="">
   <% if @articles.any? %>
@@ -9,7 +9,7 @@
         <% if article.image? %>
           <p><%= image_tag article.image.url(:medium) %></p>
         <% else %>
-          
+
         <% end %>
         <%= link_to 'Prikazi', article_path(article) %>
       </div>
