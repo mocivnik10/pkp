@@ -62,3 +62,5 @@ gem 'aws-sdk', '~> 2.3.0'
 gem 'devise'
 # Pagination
 gem 'kaminari'
+
+ruby "2.4.0"
