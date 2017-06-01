@@ -11,4 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require template/jquery.min
+//= require template/bootstrap.min
+//= require_tree ./template
 //= require_tree .

@@ -1,0 +1,21 @@
+<h1>Članki</h1>
+
+<div class="">
+  <% if @articles.any? %>
+    <% @articles.each do |article| %>
+      <div class="article">
+        <h2><%= article.title %></h2>
+        <p><%= article.description %></p>
+        <% if article.image? %>
+          <p><%= image_tag article.image.url(:medium) %></p>
+        <% else %>
+
+        <% end %>
+        <%= link_to 'Prikazi', article_path(article) %>
+      </div>
+      <br>
+    <% end %>
+  <% else %>
+    <p>Trenutno se ni novic!</p>
+  <% end %>
+</div>
