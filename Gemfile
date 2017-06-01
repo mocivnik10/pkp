@@ -53,7 +53,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Bootstrap
-gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'bootstrap-sass', '~> 3.3.7'
+
 # Paperclip for uploading images + aws
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3.0'
