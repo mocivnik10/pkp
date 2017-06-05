@@ -2,6 +2,7 @@
 
 <%= render 'form' %>
 
-<div class="current_image">
+<div class="current_image text-center">
+  <p>Trenutna slika:</p>
   <%= image_tag @article.image.url(:medium) %>
 </div>
