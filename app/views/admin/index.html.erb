@@ -1,6 +1,4 @@
-<h1>Admin<span class="badge badge-default"><%= current_admin.email %></span><span class="badge badge-danger"><%= link_to('Logout', destroy_admin_session_path, :method => :delete, class:'logout-link') %></span></h1>
-
-<%= link_to 'Dodaj Novico', new_article_path %>
+<h2>Članki <small><%= link_to '+Dodaj nov članek', new_article_path %></small></h2>
 
 <div class="">
   <% if @articles.any? %>
@@ -10,7 +8,7 @@
           <tr>
             <td>ID</td>
             <td>Naslov</td>
-            <td>Opis</td>
+            <td style="width: 500px;">Opis</td>
             <td>Actions</td>
             <td></td>
           </tr>
