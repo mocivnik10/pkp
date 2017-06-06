@@ -62,5 +62,8 @@ gem 'aws-sdk', '~> 2.3.0'
 gem 'devise'
 # Pagination
 gem 'kaminari'
+# icons
+gem "font-awesome-rails"
+
 
 ruby "2.4.0"
