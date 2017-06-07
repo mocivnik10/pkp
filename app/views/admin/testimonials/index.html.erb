@@ -1,0 +1,41 @@
+<h2>Citati <small><%= link_to '+Dodaj nov citat', new_admin_testimonial_path %></small></h2>
+
+<div class="">
+  <% if @testimonials.any? %>
+    <div class="testimonial">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Ime</td>
+            <td>Priimek</td>
+            <td>Ime Podjetja</td>
+            <td>Citat</td>
+            <td>Actions</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+    <% @testimonials.each do |testimonial| %>
+            <tr>
+              <td><%= testimonial.id %></td>
+              <td><%= testimonial.first_name %></td>
+              <td><%= testimonial.last_name %></td>
+              <td><%= testimonial.company_name %></td>
+              <td><%= testimonial.description.truncate_words(5, omission: '...') %></td>
+              <td>
+                <%= link_to 'Uredi', edit_admin_testimonial_path(testimonial) %> |
+                <%= link_to 'Prikazi', admin_testimonial_path(testimonial) %> |
+                <%= link_to 'Zbrisi', admin_testimonial_path(testimonial), method: :delete, data: { confirm: 'Ali ste prepricani?'} %>
+              </td>
+              <td><%= testimonial.created_at.to_formatted_s(:short) %></td>
+            </tr>
+    <% end %>
+      </tbody>
+    </table>
+  </div>
+  <% else %>
+    <p>Trenutno se ni dodanih citatov!</p>
+  <% end %>
+    <%= paginate @testimonials %>
+  </div>

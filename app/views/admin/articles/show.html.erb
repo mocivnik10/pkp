@@ -1,0 +1,8 @@
+<div class="show_article">
+  <%= link_to '< Nazaj', admin_articles_path %>
+  <h1><%= @article.title %></h1>
+  <p><%= @article.description %></p>
+  <div class="">
+    <%= image_tag @article.image.url(:medium) %>
+  </div>
+</div>

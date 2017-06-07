@@ -1,4 +1,4 @@
-<h2>Članki <small><%= link_to '+Dodaj nov članek', new_article_path %></small></h2>
+<h2>Članki <small><%= link_to '+Dodaj nov članek', new_admin_article_path %></small></h2>
 
 <div class="">
   <% if @articles.any? %>
@@ -8,7 +8,7 @@
           <tr>
             <td>ID</td>
             <td>Naslov</td>
-            <td style="width: 500px;">Opis</td>
+            <td style="width: 450px;">Opis</td>
             <td>Actions</td>
             <td></td>
           </tr>
@@ -20,8 +20,9 @@
               <td><%= article.title %></td>
               <td><%= article.description %></td>
               <td>
-                <%= link_to 'Uredi', edit_article_path(article) %> |
-                <%= link_to 'Zbrisi', article_path(article), method: :delete, data: { confirm: 'Ali ste prepricani?'} %>
+                <%= link_to 'Uredi', edit_admin_article_path(article) %> |
+                <%= link_to 'Prikazi', admin_article_path(article) %> |
+                <%= link_to 'Zbrisi', admin_article_path(article), method: :delete, data: { confirm: 'Ali ste prepricani?'} %>
               </td>
               <td><%= article.created_at.to_formatted_s(:short) %></td>
             </tr>
@@ -30,7 +31,7 @@
     </table>
   </div>
   <% else %>
-    <p>Trenutno se ni novic!</p>
+    <p>Trenutno se ni dodanih clankov!</p>
   <% end %>
     <%= paginate @articles %>
   </div>
