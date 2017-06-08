@@ -8,7 +8,7 @@
           <tr>
             <td>ID</td>
             <td>Naslov</td>
-            <td style="width: 450px;">Opis</td>
+            <td>Opis</td>
             <td>Actions</td>
             <td></td>
           </tr>
@@ -18,7 +18,7 @@
             <tr>
               <td><%= article.id %></td>
               <td><%= article.title %></td>
-              <td><%= article.description %></td>
+              <td><%= article.description.truncate_words(7, omission: '...') %></td>
               <td>
                 <%= link_to 'Uredi', edit_admin_article_path(article) %> |
                 <%= link_to 'Prikazi', admin_article_path(article) %> |

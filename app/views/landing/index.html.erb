@@ -112,7 +112,7 @@
 									<div class="fh5co-text-inner">
 										<div class="row">
 											<div class="col-md-6"><h3>Rok Bevc</h3></div>
-											<div class="col-md-6"><p>Waiting for Rok...</p></div>
+											<div class="col-md-6"><p>“Ker so trendi in tržne niše mnogokrat pogoj za poslovni uspeh, bi bilo res super, če bi obstajali algoritmi za uspešno iskanje tržnih niš in trendov prihodnosti na različnih področjih.”</p></div>
 										</div>
 									</div>
 								</div>
@@ -189,45 +189,6 @@
 				  <% else %>
 				    <h2>Trenutno še ni dodanih Člankov!</h2>
 				  <% end %>
-
-					<!-- <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.4s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">Health</a></div>
-								<img src="assets/img_same_dimension_3.jpg" alt="Image" class="img-responsive">
-							</div>
-							<div class="fh5co-post-text">
-								<h3><a href="#">Drinking Ginger and Lemon Tea</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div> -->
-
-					<!-- <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.7s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">Tips</a></div>
-								<img src="assets/img_same_dimension_4.jpg" alt="Image" class="img-responsive">
-							</div>
-							<div class="fh5co-post-text">
-								<h3><a href="#">4 Easy Steps to Create a Soup</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div> -->
-
 				</div>
 
 				<div class="row">
@@ -376,106 +337,48 @@
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Text text text</p>
 					</div>
 				</div>
-				<div class="row">
 
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
-							<div class="fh5co-name">
-								<img src="assets/person_5.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
+
+					<% if @testimonials.any? %>
+					<div class="row">
+						<% @first_three_testimonials.each do |testimonial| %>
+							<div class="col-md-4 col-xs-12">
+								<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+									<div class="fh5co-name">
+										<img src="assets/person_5.jpg" alt="">
+										<div class="fh5co-meta">
+											<h3><%= testimonial.first_name %> <%= testimonial.last_name %></h3>
+											<span class="fh5co-company"><%= testimonial.company_name %></span>
+										</div>
+									</div>
+									<div class="fh5co-text">
+										<p>&ldquo;<%= testimonial.description %>&rdquo;</p>
+									</div>
 								</div>
 							</div>
-							<div class="fh5co-text">
-								<p>&ldquo;Problem je vedno, pri nas, pri takih normalnih, ki nimamo neke velike firme ali pa nekega lobija zadaj, je problem denar.&rdquo;</p>
-							</div>
-						</div>
+						<% end %>
 					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-							<div class="fh5co-name">
-								<img src="assets/person_4.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
+					<div class="row">
+						<% @second_three_testimonials.each do |testimonial| %>
+							<div class="col-md-4 col-xs-12">
+								<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+									<div class="fh5co-name">
+										<img src="assets/person_5.jpg" alt="">
+										<div class="fh5co-meta">
+											<h3><%= testimonial.first_name %> <%= testimonial.last_name %></h3>
+											<span class="fh5co-company"><%= testimonial.company_name %></span>
+										</div>
+									</div>
+									<div class="fh5co-text">
+										<p>&ldquo;<%= testimonial.description %>&rdquo;</p>
+									</div>
 								</div>
 							</div>
-							<div class="fh5co-text">
-								<p>&ldquo;Se pravi, da je nekaj zaščiteno, kar ima, ne bom rekel znanega kupca, ampak kar moraš zaščitit, da te ne bi skopirali. To je bistvo. &rdquo;</p>
-							</div>
-						</div>
+						<% end %>
 					</div>
-
-					<div class="clearfix visible-sm-block"></div>
-
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
-							<div class="fh5co-name">
-								<img src="assets/person_3.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
-								</div>
-							</div>
-							<div class="fh5co-text">
-								<p>&ldquo;Ni problem prijavit, problem je vzdrževati.&rdquo;</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="clearfix visible-lg-block visible-md-block"></div>
-
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-							<div class="fh5co-name">
-								<img src="assets/person_1.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
-								</div>
-							</div>
-							<div class="fh5co-text">
-								<p>&ldquo;Skopirali so nas, ampak nimamo kaj, nimamo možnosti niti, da jih tožimo, nimamo šanse, da jih stožimo, nič. &rdquo;</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="clearfix visible-sm-block"></div>
-
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.3s">
-							<div class="fh5co-name">
-								<img src="assets/person_2.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
-								</div>
-							</div>
-							<div class="fh5co-text">
-
-								<p>&ldquo;V 36 mesecih dobiš papir, da imaš svetovni patent in tukaj se začnejo pa največji problemi in tega se vsi bojimo, zato ker ko dobiš svetovni patent pa nimaš nič.&rdquo;</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.6s">
-							<div class="fh5co-name">
-								<img src="assets/person_6.jpg" alt="">
-								<div class="fh5co-meta">
-									<h3>Ime Priimek?</h3>
-									<span class="fh5co-company">XYZ Inc.</span>
-								</div>
-							</div>
-							<div class="fh5co-text">
-								<p>&ldquo;Jaz bi rekel, da je vztrajnost in konsistenca tista. Se pravi fokus. To je tisto, kar je nas pripeljalo.&rdquo;</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="clearfix visible-sm-block"></div>
-
-				</div>
+					<% else %>
+						<h2>Trenutno še ni dodanih Citatov!</h2>
+					<% end %>
 			</div>
 		</div>
 

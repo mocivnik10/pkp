@@ -14,8 +14,8 @@
           <a class="navbar-brand" href="#">PKP Admin - <%= current_admin.email %></a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><%= link_to 'Članki', '/admin' %></li>
-          <li><%= link_to 'Citati', admin_testimonials_path %></li>
+          <li class="<%= 'active' if params[:controller] == 'admin/articles' %>"><%= link_to 'Članki', '/admin' %></li>
+          <li class="<%= 'active' if params[:controller] == 'admin/testimonials' %>"><%= link_to 'Citati', admin_testimonials_path %></li>
           <li><a href="#">Predlogi</a></li>
           <li><a href="#">Page 3</a></li>
         </ul>

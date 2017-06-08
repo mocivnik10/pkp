@@ -1,19 +1,14 @@
-<p>
-  <strong>First name:</strong>
-  <%= @testimonial.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @testimonial.last_name %>
-</p>
-
-<p>
-  <strong>Company name:</strong>
-  <%= @testimonial.company_name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @testimonial.description %>
-</p>
+<div class="testimonial-show">
+  <small><%= link_to '< Nazaj ', admin_testimonials_path, class:"back-link" %></small>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Ime:<small> <%= @testimonial.first_name %></small></h3>
+      <h3>Priimek:<small> <%= @testimonial.last_name %></small></h3>
+      <h3>Ime podjetja:<small> <%= @testimonial.company_name %></small></h3>
+    </div>
+    <div class="col-md-6">
+      <h3>Citat:</h3>
+      <p>"<%= @testimonial.description %>"</p>
+    </div>
+  </div>
+</div>

@@ -22,7 +22,7 @@
               <td><%= testimonial.first_name %></td>
               <td><%= testimonial.last_name %></td>
               <td><%= testimonial.company_name %></td>
-              <td><%= testimonial.description.truncate_words(5, omission: '...') %></td>
+              <td><%= testimonial.description.truncate_words(7, omission: '...') %></td>
               <td>
                 <%= link_to 'Uredi', edit_admin_testimonial_path(testimonial) %> |
                 <%= link_to 'Prikazi', admin_testimonial_path(testimonial) %> |
