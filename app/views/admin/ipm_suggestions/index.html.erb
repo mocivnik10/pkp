@@ -1,0 +1,34 @@
+<h2>IL Predlogi <small><%= link_to '+ Dodaj nov predlog', new_admin_ipm_suggestion_path %></small></h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Icon</th>
+      <th>Actions</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipm_suggestions.each do |ipm_suggestion| %>
+      <tr>
+        <td><%= ipm_suggestion.id %></td>
+        <td><%= ipm_suggestion.title %></td>
+        <td><%= ipm_suggestion.description.truncate_words(7, omission: '...') %></td>
+        <% if ipm_suggestion.icon.present? %>
+          <td><i class="<%= ipm_suggestion.icon %>" aria-hidden="true"></i></td>
+        <% else %>
+          <td>/</td>
+        <% end %>
+        <td><%= link_to 'Prikazi', admin_ipm_suggestion_path(ipm_suggestion) %> |
+            <%= link_to 'Uredi', edit_admin_ipm_suggestion_path(ipm_suggestion) %> |
+            <%= link_to 'Zbrisi', admin_ipm_suggestion_path(ipm_suggestion), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+        <td><%= ipm_suggestion.created_at.to_formatted_s(:short) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

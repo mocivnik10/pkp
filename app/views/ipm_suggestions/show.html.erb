@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @ipm_suggestion.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ipm_suggestion.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @ipm_suggestion.icon %>
+</p>
+
+<%= link_to 'Edit', edit_ipm_suggestion_path(@ipm_suggestion) %> |
+<%= link_to 'Back', ipm_suggestions_path %>

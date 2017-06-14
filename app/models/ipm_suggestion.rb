@@ -1,0 +1,2 @@
+class IpmSuggestion < ApplicationRecord
+end

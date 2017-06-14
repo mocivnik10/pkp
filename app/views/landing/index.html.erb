@@ -210,38 +210,21 @@
 				</div>
 				<div class="row">
 					<div class="fh5co-features">
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-							<div class="icon"><i class="fa fa-trophy"></i></div>
-							<h3>Predlog 1</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
-							<div class="icon"><i class="fa fa-smile-o"></i></div>
-							<h3>Predlog 2</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-							<div class="icon"><i class="fa fa-desktop"></i></div>
-							<h3>Predlog 3</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
-							<div class="icon"><i class="fa fa-play"></i></div>
-							<h3>Predlog 4</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-							<div class="icon"><i class="fa fa-suitcase"></i></div>
-							<h3>Predlog 5</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.3s">
-							<div class="icon"><i class="fa fa-envelope-o"></i></div>
-							<h3>Predlog 6</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-						</div>
-
+						<% if @ipm_suggestions.any? %>
+					    <% @ipm_suggestions.each do |is| %>
+								<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+									<% if is.icon.present? %>
+										<div class="icon"><i class="<%= is.icon %>"></i></div>
+									<% else %>
+										<div class="icon"><i class="fa fa-trophy"></i></div>
+									<% end %>
+									<h3><%= is.title %></h3>
+									<p><%= is.description.truncate_words(14, omission: '...') %></p>
+								</div>
+							<% end %>
+						<% else %>
+							<h2>Trenutno še ni dodanih Predlogov!</h2>
+						<% end %>
 					</div>
 				</div>
 			</div>
