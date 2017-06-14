@@ -1,0 +1,32 @@
+<%= form_for [:admin, @ipm_suggestion], html: {class: 'form-horizontal'} do |f| %>
+  <% if @ipm_suggestion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ipm_suggestion.errors.count, "error") %> prohibited this ipm_suggestion from being saved:</h2>
+
+      <ul>
+      <% ipm_suggestion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, id: :ipm_suggestion_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, id: :ipm_suggestion_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :icon %>
+    <%= f.text_field :icon, id: :ipm_suggestion_icon %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
