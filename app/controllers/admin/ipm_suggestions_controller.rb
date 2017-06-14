@@ -19,7 +19,7 @@ class Admin::IpmSuggestionsController < Admin::BaseController
     @ipm_suggestion = IpmSuggestion.new(ipm_suggestion_params)
 
     if @ipm_suggestion.save
-      redirect_to admin_ipm_suggestions_path, flash: {notice: 'Predlog uspesno ustvarjen!'}
+      redirect_to admin_ipm_suggestions_path, flash: {success: 'Predlog uspesno ustvarjen!'}
     else
       render 'new'
     end
@@ -27,7 +27,7 @@ class Admin::IpmSuggestionsController < Admin::BaseController
 
   def update
     if @ipm_suggestion.update(ipm_suggestion_params)
-      redirect_to admin_ipm_suggestions_path, flash: {notice: 'Predlog uspesno posodobljen!'}
+      redirect_to admin_ipm_suggestions_path, flash: {success: 'Predlog uspesno posodobljen!'}
     else
       render 'edit'
     end
@@ -35,9 +35,9 @@ class Admin::IpmSuggestionsController < Admin::BaseController
 
   def destroy
     if @ipm_suggestion.destroy
-      redirect_to admin_ipm_suggestions_path, flash: {notice: 'Predlog uspesno zbrisan!'}
+      redirect_to admin_ipm_suggestions_path, flash: {success: 'Predlog uspesno zbrisan!'}
     else
-      redirect_to admin_ipm_suggestions_path, flash: {notice: 'Predloga ni bilo mogoce izbrisati'}
+      redirect_to admin_ipm_suggestions_path, flash: {alert: 'Predloga ni bilo mogoce izbrisati'}
     end
   end
 

@@ -11,22 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, id: :ipm_suggestion_title %>
+  <div class="form-group">
+    <%= f.label :title, class:'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, id: :ipm_suggestion_title, class:'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class:'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, id: :ipm_suggestion_description, rows:'10', class:'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :icon, class:'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.text_field :icon, id: :ipm_suggestion_icon, class:'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <p>
+        Kako vnesem ikonco? Na <a href="http://fontawesome.io/icons/">Font Awesome</a> izberi ikono ter prilepi class icone v polje zgoraj.<br>
+        Npr: <i>fa fa-facebook-official</i> = <i class="fa fa-facebook-official" aria-hidden="true"></i>
+      </p>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description, id: :ipm_suggestion_description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :icon %>
-    <%= f.text_field :icon, id: :ipm_suggestion_icon %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit 'Shrani', class:'btn btn-default' %>
+      <%= link_to 'Prekliči', admin_ipm_suggestions_path, class:'btn btn-danger' %>
+    </div>
   </div>
 <% end %>

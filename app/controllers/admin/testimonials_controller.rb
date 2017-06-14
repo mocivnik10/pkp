@@ -19,7 +19,7 @@ class Admin::TestimonialsController < Admin::BaseController
     @testimonial = Testimonial.new(testimonial_params)
 
     if @testimonial.save
-      redirect_to admin_testimonials_path, flash: {notice: 'Citat uspesno ustvarjen!'}
+      redirect_to admin_testimonials_path, flash: {success: 'Citat uspesno ustvarjen!'}
     else
       render 'new'
     end
@@ -27,7 +27,7 @@ class Admin::TestimonialsController < Admin::BaseController
 
   def update
     if @testimonial.update(testimonial_params)
-      redirect_to admin_testimonials_path, flash: {notice: 'Citat uspesno posodobljen!'}
+      redirect_to admin_testimonials_path, flash: {success: 'Citat uspesno posodobljen!'}
     else
       render 'edit'
     end
@@ -35,9 +35,9 @@ class Admin::TestimonialsController < Admin::BaseController
 
   def destroy
     if @testimonial.destroy
-      redirect_to admin_testimonials_path, flash: {notice: 'Citat uspesno izbrisan!'}
+      redirect_to admin_testimonials_path, flash: {success: 'Citat uspesno izbrisan!'}
     else
-      redirect_to admin_testimonials_path, flash: {notice: 'Citata ni bilo mogoce izbrisati!'}
+      redirect_to admin_testimonials_path, flash: {alert: 'Citata ni bilo mogoce izbrisati!'}
     end
   end
 

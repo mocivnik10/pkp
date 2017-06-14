@@ -25,7 +25,7 @@
       </div>
     </nav>
     <div class="container">
-      <p id="notice"><%= notice %></p>
+      <%= render "shared/flash_messages", flash: flash %> 
       <%= yield %>
     </div>
   </body>
