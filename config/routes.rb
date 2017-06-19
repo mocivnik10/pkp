@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
   resources :ipm_suggestions, only: [:index, :show]
 
-  devise_for :admins
+  devise_for :admins, controllers: { sessions: 'admins/sessions' }
 
   namespace :admin do
     resources :articles
