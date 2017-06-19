@@ -64,6 +64,7 @@ gem 'devise'
 gem 'kaminari'
 # icons
 gem "font-awesome-rails"
-
+# wysiwyg editor
+gem 'tinymce-rails'
 
 ruby "2.4.0"

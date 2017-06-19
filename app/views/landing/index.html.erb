@@ -161,7 +161,7 @@
 									</div>
 									<div class="fh5co-post-text">
 										<h3><%= link_to article.title, article_path(article) %></h3>
-										<p><%= article.description.truncate_words(5, omission: '...') %></p>
+										<p><%= article.description.truncate_words(5, omission: '...').html_safe %></p>
 									</div>
 									<div class="fh5co-post-meta">
 										<!-- <a href="#"><i class="icon-chat"></i> 33</a> -->
