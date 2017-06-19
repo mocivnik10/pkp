@@ -1,5 +1,21 @@
-<div class="show_article">
-  <%= link_to '< Nazaj', articles_path %>
-  <h1><%= @article.title %></h1>
-  <p><%= @article.description %></p>
+<div class="fh5co-features-style-1 subpages-header" style="background-image: url('<%= @article.image.url %>');" data-stellar-background-ratio="0.5">
+  <div class="fh5co-overlay"></div>
+  <div class="container" style="z-index: 3; position: relative;">
+  <div class="row p-b"></div>
+    <div class="row">
+      <div class="fh5co-features">
+        <div class="fh5co-feature wow fadeInUp pages_header" data-wow-duration="1s" data-wow-delay=".8s">
+          <h2 class="fh5co-heading"><%= @article.title %></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="show_article">
+    <%= link_to '< Nazaj', articles_path %>
+    <h1></h1>
+    <p><%= @article.description %></p>
+  </div>
 </div>
