@@ -1,5 +1,5 @@
 <div class="show_article">
-  <small><%= link_to '< Nazaj ', admin_articles_path, class:"back-link" %></small>
+  <small><%= link_to '< Nazaj ', admin_articles_path, class:"back-link" %> | <%= link_to 'Uredi', edit_admin_article_path(@article), class:"back-link" %></small>
   <h1><%= @article.title %></h1>
   <p><%= @article.description.html_safe %></p>
   <hr>

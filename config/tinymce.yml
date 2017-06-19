@@ -1,6 +1,11 @@
-toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
+branding: false
+
 plugins:
   - image
   - link
+  - lists
+  - advlist
+
+toolbar:
+  - styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | undo redo | bullist numlist |
+  - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image |
