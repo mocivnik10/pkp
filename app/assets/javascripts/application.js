@@ -15,3 +15,4 @@
 //= require template/bootstrap.min
 //= require_tree ./template
 //= require_tree .
+//= require tinymce

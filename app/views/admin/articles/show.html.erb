@@ -1,8 +1,9 @@
 <div class="show_article">
   <small><%= link_to '< Nazaj ', admin_articles_path, class:"back-link" %></small>
   <h1><%= @article.title %></h1>
-  <p><%= @article.description %></p>
+  <p><%= @article.description.html_safe %></p>
+  <hr>
   <div class="">
-    <%= image_tag @article.image.url(:medium) %>
+    <h4>Naslovna slika prispevka:</h4> <%= image_tag @article.image.url(:medium) %>
   </div>
 </div>

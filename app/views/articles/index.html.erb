@@ -25,7 +25,7 @@
           <% end %>
           <div class="caption">
             <h3><%= article.title %></h3>
-            <p><%= article.description.truncate_words(20, omission:'...') %></p>
+            <p><%= article.description.truncate_words(20, omission:'...').html_safe %></p>
             <p><%= link_to 'Prikazi', article_path(article) %></p>
           </div>
         </div>

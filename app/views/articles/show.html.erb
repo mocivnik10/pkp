@@ -16,6 +16,6 @@
   <div class="show_article">
     <%= link_to '< Nazaj', articles_path %>
     <h1></h1>
-    <p><%= @article.description %></p>
+    <p><%= @article.description.html_safe %></p>
   </div>
 </div>
