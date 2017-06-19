@@ -1,26 +1,5 @@
 <div id="fh5co-page">
-		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
-			<div class="container">
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
-					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-					<a href="#">PKP</a>
-				</div>
-				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
-					<ul data-offcanvass="yes">
-						<li class="active"><%= link_to "Domov", root_path %></li>
-						<li><%= link_to "Ekipa", "#" %></li>
-						<li><%= link_to "Članki", articles_path %></li>
-						<li><a href="#">Top IP predlogi</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
-					<ul class="fh5co-special" data-offcanvass="yes">
-						<!-- <li><a href="#">Login</a></li> -->
-						<li><a href="#" class="call-to-action">O Projektu</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+
 
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background-image: url(assets/tesla1.jpg);">
@@ -33,11 +12,16 @@
 			<div class="fh5co-cover-text">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-push-6 col-md-6 full-height js-full-height">
+						<div class="col-md-8 full-height js-full-height">
 							<div class="fh5co-cover-intro">
-								<!-- <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Top IP predlog naslov</h1> -->
-								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">"Tehnični izum je podoben arhitekturi in strokovnjaki morajo v določenem času priti do enakih rešitev, ki sem jih jaz našel že zdavnaj. Prej ali slej bo moja moč sistema sprejeta v celoti, in kolikor sem seznanjen, je tako dobra kot narejeno."</h2>
-								<p class="wow fadeInUp nikola-tesla" data-wow-duration="1s" data-wow-delay="1.1s"><!-- <a href="#" class="btn btn-primary btn-outline btn-lg">Preberi več</a>-->- Nikola Tesla</p>
+								<h2 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Management in Izkoriščanje <br>Intelektualne Lastnine</h2>
+								<!-- <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Podnaslov</h2> -->
+							</div>
+						</div>
+						<div class="col-md-4 full-height js-full-height">
+							<div class="fh5co-cover-intro">
+								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">"<em>Tehnični izum je podoben arhitekturi in strokovnjaki morajo v določenem času priti do enakih rešitev, ki sem jih jaz našel že zdavnaj. Prej ali slej bo moja moč sistema sprejeta v celoti, in kolikor sem seznanjen, je tako dobra kot narejeno.</em>"</h2>
+								<p class="wow fadeInUp nikola-tesla text-right" data-wow-duration="1s" data-wow-delay="1.5s">- Nikola Tesla</p>
 							</div>
 						</div>
 					</div>
@@ -157,7 +141,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Članki</h2>
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Prispevki</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Tukaj gre kratka vsebina?</p>
 					</div>
 				</div>
@@ -168,7 +152,7 @@
 								<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
 									<div class="fh5co-post-image">
 										<div class="fh5co-overlay"></div>
-										<div class="fh5co-category"><%= link_to 'Preberi Članek', article_path(article) %></div>
+										<div class="fh5co-category"><%= link_to 'Preberi Prispevek', article_path(article) %></div>
 										<% if article.image? %>
 						          <%= image_tag article.image.url(:medium), class:'img-article', alt:'Image' %>
 						        <% else %>

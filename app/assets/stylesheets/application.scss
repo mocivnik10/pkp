@@ -7,3 +7,22 @@
 //= require_self
 
 @import "font-awesome";
+
+.pages_header {
+  border: none !important;
+}
+
+// Dropdown in navbar //
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.19);
+  li {
+    a:hover {
+      background-color: transparent !important;
+    }
+  }
+}
+// Dropdown in navbar //
+
+.subpages-header {
+  margin-bottom: 40px;
+}
