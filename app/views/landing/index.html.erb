@@ -14,7 +14,7 @@
 					<div class="row">
 						<div class="col-md-8 full-height js-full-height">
 							<div class="fh5co-cover-intro">
-								<h2 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Management in Izkoriščanje <br>Intelektualne Lastnine</h2>
+								<h2 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Management in <br>Izkoriščanje <br>Intelektualne Lastnine</h2>
 								<!-- <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Podnaslov</h2> -->
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 			</div>
 			<div class="fh5co-projects">
 				<ul>
-					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1.4s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -58,7 +58,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1.7s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1.3s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -73,7 +73,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1.6s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -88,7 +88,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="1.9s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -118,7 +118,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(assets/team_background1.jpg);" data-wow-duration="1s" data-wow-delay="2.1s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -304,45 +304,27 @@
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Text text text</p>
 					</div>
 				</div>
-
-
 					<% if @testimonials.any? %>
-					<div class="row">
-						<% @first_three_testimonials.each do |testimonial| %>
-							<div class="col-md-4 col-xs-12">
-								<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
-									<div class="fh5co-name">
-										<img src="assets/person_5.jpg" alt="">
-										<div class="fh5co-meta">
-											<h3><%= testimonial.first_name %> <%= testimonial.last_name %></h3>
-											<span class="fh5co-company"><%= testimonial.company_name %></span>
+						<% @testimonials.in_groups_of(3, false) do |group| %>
+							<div class="row">
+								<% group.each do |testimonial| %>
+								<div class="col-md-4 col-xs-12">
+									<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+										<div class="fh5co-name">
+											<img src="assets/person_5.jpg" alt="">
+											<div class="fh5co-meta">
+												<h3><%= testimonial.first_name %> <%= testimonial.last_name %></h3>
+												<span class="fh5co-company"><%= testimonial.company_name %></span>
+											</div>
+										</div>
+										<div class="fh5co-text">
+											<p>&ldquo;<%= testimonial.description %>&rdquo;</p>
 										</div>
 									</div>
-									<div class="fh5co-text">
-										<p>&ldquo;<%= testimonial.description %>&rdquo;</p>
-									</div>
 								</div>
+								<% end %>
 							</div>
 						<% end %>
-					</div>
-					<div class="row">
-						<% @second_three_testimonials.each do |testimonial| %>
-							<div class="col-md-4 col-xs-12">
-								<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
-									<div class="fh5co-name">
-										<img src="assets/person_5.jpg" alt="">
-										<div class="fh5co-meta">
-											<h3><%= testimonial.first_name %> <%= testimonial.last_name %></h3>
-											<span class="fh5co-company"><%= testimonial.company_name %></span>
-										</div>
-									</div>
-									<div class="fh5co-text">
-										<p>&ldquo;<%= testimonial.description %>&rdquo;</p>
-									</div>
-								</div>
-							</div>
-						<% end %>
-					</div>
 					<% else %>
 						<h2>Trenutno še ni dodanih Citatov!</h2>
 					<% end %>
@@ -350,4 +332,4 @@
 		</div>
 
 
-	</div>
+</div>
