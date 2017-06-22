@@ -6,8 +6,6 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
-
-
   </head>
 
   <body>
@@ -34,7 +32,7 @@
           <div class="col-lg-2 col-md-3 col-sm-3 text-right fh5co-link-wrap">
             <ul class="fh5co-special" data-offcanvass="yes">
               <!-- <li><a href="#">Login</a></li> -->
-              <li><a href="#" class="call-to-action">O Projektu</a></li>
+              <li><%= link_to "O Projektu", about_project_path, class:'call-to-action' %></li>
             </ul>
           </div>
         </div>
@@ -73,9 +71,9 @@
               </ul>
             </div>
             <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-              <h3>About</h3>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-              <p><a href="#" class="btn btn-success btn-sm btn-outline">KDO SMO?</a></p>
+              <h3>O Projektu</h3>
+              <p>V projektu je sodelovalo 6 študentov FIŠ, 2 pedagoška mentorja, 2 delovni mentorici in 2 dodatna sodelavca. </p>
+              <%= link_to "Preberi Več", about_project_path, class:'btn btn-success btn-sm btn-outline' %>
             </div>
             <div class="clearfix visible-sm-block"></div>
           </div>
