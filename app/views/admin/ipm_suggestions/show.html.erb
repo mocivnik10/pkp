@@ -1,14 +1,12 @@
-<p>
-  <strong>Title:</strong>
-  <%= @ipm_suggestion.title %>
-</p>
+<div class="show_suggestion">
+  <small><%= link_to '< Nazaj ', admin_ipm_suggestions_path, class:"back-link" %> | <%= link_to 'Uredi', edit_admin_ipm_suggestion_path(@ipm_suggestion), class:"back-link" %></small>
+  <p>
+    <strong>Predlog:</strong>
+    <%= @ipm_suggestion.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @ipm_suggestion.description %>
-</p>
-
-<p>
-  <strong>Icon:</strong>
-  <%= @ipm_suggestion.icon %>
-</p>
+  <p>
+    <strong>Icon:</strong>
+    <i class="<%= @ipm_suggestion.icon %>" aria-hidden="true"></i>
+  </p>
+</div>
