@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :testimonials, only: [:index, :show]
   resources :articles, only: [:index, :show]
   resources :ipm_suggestions, only: [:index, :show]
+  match "/about_project", to: "about_project#index", via: 'get'
 
   devise_for :admins, controllers: { sessions: 'admins/sessions' }
 
