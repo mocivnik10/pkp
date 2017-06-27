@@ -16,15 +16,23 @@
 
 <% @ipm_suggestions.each.with_index do |ipm_suggestion, index| %>
   <% if index.odd? %>
-    <div class="row p-b">
+    <div class="row p-b suggestion-boxes">
       <div class="col-md-8 col-md-offset-4">
         <em>"<%= ipm_suggestion.description %>"</em>
       </div>
+      <div class="col-md-9 col-md-offset-3 index-number">
+        <div class="number-circle"><%= index + 1 %></div>
+        <hr>
+      </div>
     </div>
   <% else %>
-    <div class="row p-b">
+    <div class="row p-b suggestion-boxes">
       <div class="col-md-8">
         <em>"<%= ipm_suggestion.description %>"</em>
+      </div>
+      <div class="col-md-9 index-number text-right">
+        <div class="number-circle"><%= index + 1 %></div>
+        <hr>
       </div>
     </div>
   <% end %>
