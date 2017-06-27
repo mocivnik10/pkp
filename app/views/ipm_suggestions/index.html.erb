@@ -1,29 +1,33 @@
-<h1>Ipm Suggestions</h1>
+<div class="fh5co-features-style-1 subpages-header" style="background-image: url(assets/ipm_background.jpg);" data-stellar-background-ratio="0.5">
+  <div class="fh5co-overlay"></div>
+  <div class="container" style="z-index: 3; position: relative;">
+  <div class="row p-b"></div>
+    <div class="row">
+      <div class="fh5co-features">
+        <div class="fh5co-feature wow fadeInUp pages_header" data-wow-duration="1s" data-wow-delay=".8s">
+          <h2 class="fh5co-heading">Predlogi top IP managerjev</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Icon</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
 
-  <tbody>
-    <% @ipm_suggestions.each do |ipm_suggestion| %>
-      <tr>
-        <td><%= ipm_suggestion.title %></td>
-        <td><%= ipm_suggestion.description %></td>
-        <td><%= ipm_suggestion.icon %></td>
-        <td><%= link_to 'Show', ipm_suggestion %></td>
-        <td><%= link_to 'Edit', edit_ipm_suggestion_path(ipm_suggestion) %></td>
-        <td><%= link_to 'Destroy', ipm_suggestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @ipm_suggestions.each.with_index do |ipm_suggestion, index| %>
+  <% if index.odd? %>
+    <div class="row p-b">
+      <div class="col-md-8 col-md-offset-4">
+        <em>"<%= ipm_suggestion.description %>"</em>
+      </div>
+    </div>
+  <% else %>
+    <div class="row p-b">
+      <div class="col-md-8">
+        <em>"<%= ipm_suggestion.description %>"</em>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 
-<br>
-
-<%= link_to 'New Ipm Suggestion', new_ipm_suggestion_path %>
+</div>

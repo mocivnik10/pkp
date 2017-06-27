@@ -184,7 +184,7 @@
 		</div>
 
 
-		<div class="fh5co-features-style-1" style="background-image: url(assets/vision_background.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-features-style-1" style="background-image: url(assets/predlogi_background.jpg);" data-stellar-background-ratio="0.5">
 			<div class="fh5co-overlay"></div>
 			<div class="container" style="z-index: 3; position: relative;">
 				<div class="row p-b">
@@ -196,14 +196,18 @@
 					<div class="fh5co-features">
 						<% if @ipm_suggestions.any? %>
 					    <% @ipm_suggestions.each do |is| %>
-								<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-									<% if is.icon.present? %>
-										<div class="icon"><i class="<%= is.icon %>"></i></div>
-									<% else %>
-										<div class="icon"><i class="fa fa-trophy"></i></div>
+								<div class="fh5co-feature wow fadeInUp ipm_suggestion_landing_box" data-wow-duration="1s" data-wow-delay=".8s">
+									<%= link_to ipm_suggestions_path do %>
+										<div class="">
+											<% if is.icon.present? %>
+												<div class="icon"><i class="<%= is.icon %>"></i></div>
+											<% else %>
+												<div class="icon"><i class="fa fa-trophy"></i></div>
+											<% end %>
+											<h3><%= is.title %></h3>
+											<p><%= is.description.truncate_words(14, omission: '...') %></p>
+										</div>
 									<% end %>
-									<h3><%= is.title %></h3>
-									<p><%= is.description.truncate_words(14, omission: '...') %></p>
 								</div>
 							<% end %>
 						<% else %>
@@ -265,7 +269,7 @@
 			</div>
 		</div>
 
-		<div class="fh5co-counter-style-2" style="background-image: url(assets/tesla_background.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-counter-style-2" style="background-image: url(assets/vision_background.jpg);" data-stellar-background-ratio="0.5">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
 				<div class="fh5co-section-content-wrap">
