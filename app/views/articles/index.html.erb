@@ -13,6 +13,12 @@
 </div>
 
 <div class="container">
+  <% @articles.each do |a| %>
+    <p><%= a.title %></p>
+  <% end %>
+</div>
+
+<!-- <div class="container">
   <% if @articles.any? %>
     <% @articles.in_groups_of(3, false) do |group| %>
       <div class="row p-b">
@@ -37,4 +43,4 @@
   <% else %>
     <p>Trenutno se ni novic!</p>
   <% end %>
-</div>
+</div> -->
