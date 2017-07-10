@@ -23,7 +23,7 @@
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Uporaba IPR Tad tabele", ipr_tad_usage_path %></li>
-                  <li><a href="#">IPR Tad tabela</a></li>
+                  <li><%= link_to "IPR Tad tabela", activity_table_path %></li>
                 </ul>
               </li>
               <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to "Prispevki", articles_path %></li>

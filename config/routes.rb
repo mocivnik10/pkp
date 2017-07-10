@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :ipm_suggestions, only: [:index, :show]
   match "/about_project", to: "about_project#index", via: 'get'
   match "/ipr_tad_usage", to: "ipr_tad_usage#index", via: 'get'
+  match "/activity_table", to: "activity_table#index", via: 'get'
 
   devise_for :admins, controllers: { sessions: 'admins/sessions' }
 

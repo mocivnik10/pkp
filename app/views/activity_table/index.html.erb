@@ -1,0 +1,35 @@
+<div class="fh5co-features-style-1 subpages-header" style="background-image: url(assets/ipr_background1.jpg );" data-stellar-background-ratio="0.5">
+  <div class="fh5co-overlay"></div>
+  <div class="container" style="z-index: 3; position: relative;">
+  <div class="row p-b"></div>
+    <div class="row">
+      <div class="fh5co-features">
+        <div class="fh5co-feature wow fadeInUp pages_header" data-wow-duration="1s" data-wow-delay=".8s">
+          <h2 class="fh5co-heading">IPR TAD Tabela</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center p-b">
+  <div class="activity_table_image" id="image_wrapper">
+    <img class="ipr_images" id="ipr_image" src="assets/activity_ipr_image.svg" alt="">
+    <div id="ipr_image_hover" style="display:none;">
+      <img class="ipr_images" src="assets/activity_ipr_image_hovered.svg" alt="">
+      <%= link_to "Prenesi", "https://s3.amazonaws.com/pkpprojekt/ipr_tad/Activity_table.xlsx", class:'btn btn-success btn-sm btn-outline download-ipr-table-button' %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('#image_wrapper').hover(function()
+  {
+    $('#ipr_image').hide();
+    $('#ipr_image_hover').fadeIn();
+  }, function()
+  {
+    $('#ipr_image_hover').hide();
+    $('#ipr_image').fadeIn();
+  });
+</script>
