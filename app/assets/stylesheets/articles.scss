@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .article-thumbnail {
+  min-height: 460px;
   &:hover {
     transform: scale(1.01);
     background-color: #fafafa;
