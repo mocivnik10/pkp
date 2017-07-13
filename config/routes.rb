@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match "/about_project", to: "about_project#index", via: 'get'
   match "/ipr_tad_usage", to: "ipr_tad_usage#index", via: 'get'
   match "/activity_table", to: "activity_table#index", via: 'get'
+  match "/report", to: "report#index", via: 'get'
 
   devise_for :admins, controllers: { sessions: 'admins/sessions' }
 
