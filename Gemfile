@@ -66,5 +66,7 @@ gem 'kaminari'
 gem "font-awesome-rails"
 # wysiwyg editor
 gem 'tinymce-rails'
+# PDF viewer
+gem 'pdfjs_viewer-rails'
 
 ruby "2.4.0"
