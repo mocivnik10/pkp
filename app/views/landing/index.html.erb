@@ -15,7 +15,6 @@
 						<div class="col-md-8 full-height js-full-height">
 							<div class="fh5co-cover-intro">
 								<h2 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Management in <br>Izkoriščanje <br>Intelektualne Lastnine</h2>
-								<!-- <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Podnaslov</h2> -->
 							</div>
 						</div>
 						<div class="col-md-4 full-height js-full-height">
@@ -164,8 +163,9 @@
 										<p><%= article.description.truncate_words(5, omission: '...').html_safe %></p>
 									</div>
 									<div class="fh5co-post-meta">
-										<!-- <a href="#"><i class="icon-chat"></i> 33</a> -->
-										<a href="#"><i class="fa fa-clock-o"></i><%= article.created_at.to_formatted_s(:short) %></a>
+										<%= link_to article_path(article) do %>
+											<i class="fa fa-clock-o"></i><%= article.created_at.to_formatted_s(:short) %>
+										<% end %>
 									</div>
 								</div>
 							</div>
