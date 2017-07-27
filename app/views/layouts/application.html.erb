@@ -19,17 +19,10 @@
           <div class="col-lg-9 col-md-9 col-sm-9 text-right fh5co-link-wrap">
             <ul data-offcanvass="yes">
               <li class="<%= 'active' if params[:controller] == 'ipm_suggestions' %>"><%= link_to "Top IP predlogi", ipm_suggestions_path %></li>
-              <li class="dropdown <%= 'active' if params[:controller] == 'ipr_tad_usage' %>">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Orodje
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Uporaba IPR Tad tabele", ipr_tad_usage_path %></li>
-                  <li><%= link_to "IPR Tad tabela", activity_table_path %></li>
-                </ul>
-              </li>
               <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to "Prispevki", articles_path %></li>
+              <li class="<%= 'active' if params[:controller] == 'about_project' %>"><%= link_to "O Projektu", about_project_path %></li>
               <li><%= link_to "Poročilo", report_path %></li>
-              <li><%= link_to "O Projektu", about_project_path, class:'call-to-action' %></li>
+              <li><%= link_to "Orodje", ipr_tad_usage_path, class:'call-to-action' %></li>
             </ul>
           </div>
         </div>
