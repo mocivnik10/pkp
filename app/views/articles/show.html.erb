@@ -13,9 +13,12 @@
 </div>
 
 <div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'Prispevki', articles_path %></li>
+    <li class="breadcrumb-item active"><%= @article.title %></li>
+  </ol>
+
   <div class="show_article">
-    <%= link_to '< Nazaj', articles_path %>
-    <h1></h1>
     <p><%= @article.description.html_safe %></p>
   </div>
 </div>
