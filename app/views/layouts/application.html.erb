@@ -21,7 +21,7 @@
               <li class="<%= 'active' if params[:controller] == 'ipm_suggestions' %>"><%= link_to "Top IP predlogi", ipm_suggestions_path %></li>
               <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to "Prispevki", articles_path %></li>
               <li class="<%= 'active' if params[:controller] == 'about_project' %>"><%= link_to "O Projektu", about_project_path %></li>
-              <li><%= link_to "Poročilo", report_path %></li>
+              <li><%= link_to "Poročilo", report_path, target:'_blank' %></li>
               <li><%= link_to "Orodje", ipr_tad_usage_path, class:'call-to-action' %></li>
             </ul>
           </div>
@@ -45,7 +45,7 @@
                 <li><%= link_to "Predlogi", ipm_suggestions_path %></li>
                 <li><%= link_to "IPR Tad tabela", ipr_tad_usage_path %></li>
                 <li><%= link_to "Prispevki", articles_path %></li>
-                <li><%= link_to "Poročilo", report_path %></li>
+                <li><%= link_to "Poročilo", report_path, target:'_blank' %></li>
               </ul>
             </div>
             <div class="clearfix visible-sm-block"></div>
