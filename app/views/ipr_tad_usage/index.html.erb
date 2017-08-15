@@ -15,6 +15,7 @@
 <div class="container p-b">
   <div class="p-b">
     <%= link_to "Prenesi IPR TAD", "https://s3.amazonaws.com/pkpprojekt/ipr_tad/Activity_table.xlsx", class:'btn btn-success btn-sm btn-outline' %>
+    <%= link_to "IPR TAD tabela projekta", final_ipr_tad_path, target:'_blank', class:'btn btn-success btn-sm btn-outline' %>
   </div>
   <p>
     <strong>TAD tabela</strong> vsebuje strukturirano zbirko aktivnosti, ki prinesejo rezultate za izbrani poslovni proces. Poslovni proces lahko vsebuje enega ali več delovnih procesov, delovni procesi pa eno ali več aktivnosti. Aktivnosti potekajo v določenem zaporedju in se med seboj povezujejo. Aktivnostim lahko v TAD tabeli pripišemo vse povezave k ostalim aktivnostim s katerimi se povezujejo,  opredelimo osebe, ki na aktivnosti sodelujejo, opredelimo ali gre za začetno, vmesno, končno aktivnost ali odločitev. Lahko jo obogatimo tudi z različnimi parametri kot so naprimer opis, čas trajanja, pravila, ki veljajo za aktivnost in njeni vhodi in izhodi. Aktivnosti med seboj povezujemo s puščicami. Da pa bi vedeli katera oseba sodeluje na aktivnosti pa vpišemo opisni znak za aktivnost v presek med aktivnostjo in osebo, ki na aktivnosti sodeluje. V primeru, da gre za začetno ali končno aktivnost je ta znak krog, za vmesno aktivnost je to kvadrat, če pa gre za odločitev vpišemo romb. Tudi entitete oziroma osebe, ki na aktivnostih sodelujejo lahko razdelimo v več sektorjev, ki so lahko eksterni ali interni, katerih del je ena ali več oseb, ki lahko sodelujejo na aktivnostih. Vsako polje, ki vsebuje katerega od znakov pomeni, da oseba sodeluje na določeni aktivnosti. Aktivnosti, ki so potrebne za izvedbo poslovnega procesa pridobimo z intervjuvanjem oseb, ki imajo izkušnje in znanje v poslovnem procesu za katerega se TAD tabela izpolnjuje.
@@ -31,6 +32,7 @@
     Simbol Kvadrat <span class="geometric-symbol">&#x25A1;</span> pomeni, torej da je entiteta resurs oziroma izvajalec aktivnosti, ki se nahaja v križišču z njo. Puščica se lahko uporabi vodoravno ali navpično. Vodoravna povezava poveže vse entitete, ki na aktivnosti sodelujejo, z navpično puščico pa povezujemo zaporedne aktivnosti. Simbol Romb <span class="geometric-symbol">&#x25C7;</span> pomeni odločitev, katerih povezave lahko razpršimo na toliko poti kolikor možnih je odločitev. Simbol krog <span class="geometric-symbol">&#x25CB;</span> pa označuje, da je označena aktivnost zaključna.
   </p>
   <div class="pull-right">
+    <%= link_to "IPR TAD tabela projekta", final_ipr_tad_path, target:'_blank', class:'btn btn-success btn-sm btn-outline' %>
     <%= link_to "Prenesi IPR TAD", "https://s3.amazonaws.com/pkpprojekt/ipr_tad/Activity_table.xlsx", class:'btn btn-success btn-sm btn-outline' %>
   </div>
 </div>
